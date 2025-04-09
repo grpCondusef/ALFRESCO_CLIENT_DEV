@@ -1,0 +1,313 @@
+.add-expediente-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-weight: 300;
+    background: #672d45;
+    height: 3.4rem;
+    text-align: center;
+    color: #ffff;
+    margin-bottom: 0.7rem;
+    border-radius: 0.3rem;
+    font-size: 1.7rem;
+}
+
+.add-expediente-form {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.442);
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.crear-expediente-container {
+    width: 80vw;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+}
+
+.field-container {
+    width: 100%;
+}
+
+.add-expediente-field-label {
+    color: #621132;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.add-expediente-field {
+    width: 74vw;
+    border-bottom: 1px solid #aaaaaa;
+    background-color: transparent;
+    font-size: 17.5px;
+    font-family: Montserrat;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    min-height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    background-color: #ffffff00;
+    margin: 10px 10px 10px 0;
+}
+
+.doble-field {
+    width: 74vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-expediente-doble-field {
+    width: 35vw;
+    border-bottom: 1px dotted #aaaaaa;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: Montserrat;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    min-height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 10px 10px 10px 0;
+}
+
+.doble-field-container.pori {
+    width: 35.6vw;
+    color: rgb(17, 15, 15);
+}
+
+.doble-field-containers.pori.select-pori {
+    display: flex;
+    color: rgb(17, 15, 15);
+}
+
+.toggler-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10rem;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+    background-color: #44cc66;
+}
+
+.toggler-wrapper .toggler-slider {
+    background-color: #ccc;
+    position: absolute;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 100%;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+    left: calc(100% - 19px - 3px);
+}
+
+.toggler-wrapper.style-1 .toggler-knob {
+    width: calc(25px - 6px);
+    height: calc(25px - 6px);
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    background-color: #fff;
+}
+
+.react-autosuggest__input {
+    width: 100%;
+    margin: 1rem 0;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.react-autosuggest__suggestions-container {
+    width: 95%;
+    max-height: 7rem;
+    overflow-y: scroll;
+    margin-bottom: 1rem;
+}
+
+.react-autosuggest__suggestion {
+    margin: 0.2rem 0;
+}
+
+.react-autosuggest__suggestion:hover {
+    background-color: #621132;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.add-expediente-btn-container {
+    max-width: 16rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-add-expediente-btn {
+    width: 6rem;
+    height: 2rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px 0.8px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    font-size: 14px;
+    color: #000;
+}
+
+.add-expediente-btn {
+    width: 8rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #672d45;
+    box-shadow: 1px 1px 2px 0.8px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    font-size: 14px;
+    color: #ffff;
+}
+
+.form-alert-message {
+    height: 2rem;
+    background-color: #902f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-message {
+    color: #ffff;
+}
+
+.campo-vacio-message-container {
+    width: 50%;
+    margin: 1rem auto;
+    margin-top: -1.2rem;
+    text-align: center;
+}
+
+.campo-vacio-message {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #9d2449;
+}
+
+.option-create-expediente-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 11.4rem;
+    height: 2.5rem;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    color: #000000;
+    background-color: #b38e5d;
+    font-weight: 500;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0 2rem;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.massive-upload-icon-btn{
+    width: 1.5rem;
+}
+
+.go-to-add-migrate-expediente-container {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0.5rem 0;
+}
+
+/* Estilos para las opciones genéricas en el autocompletado */
+.sugerencia-generica {
+    font-weight: bold;
+    color: #621132; /* Color principal de tu aplicación */
+    background-color: #f0f0f0;
+    border-left: 3px solid #621132;
+    padding-left: 5px;
+  }
+  
+  .sugerencia-generica:hover {
+    background-color: #621132 !important; 
+    color: white !important;
+  }

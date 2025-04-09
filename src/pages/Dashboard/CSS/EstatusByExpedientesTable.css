@@ -1,0 +1,55 @@
+.table-estatus-by-expedientes-container{
+    width: 50vw;
+    margin: auto;
+}
+
+.estatus-by-expedientes-thead{
+    height: 3rem;
+    background: #621132;
+    color: #fff;
+    font-size: 1rem;
+    border-bottom: 1.4px solid #f9f6f6;
+    text-align: center;
+    /* FIJAR EL THEAD CUANDO HACEMOS SCROLL */
+    position: sticky;
+    top: 0;
+}
+
+.table-expedientes-status{
+    overflow-y: scroll;
+}
+
+.EstatusDigGraphTable-container{
+    padding: 2rem 0;
+}
+
+.btn-download-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 8.5rem;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    color: #000;
+    background-color: #b38e5d;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.export-expediente-status-data{
+    width: 1.5rem;
+}

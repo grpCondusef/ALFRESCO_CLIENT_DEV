@@ -1,0 +1,191 @@
+.massive-upload-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.massive-upload-title-container {
+    margin: auto;
+    text-align: center;
+    color: #454444;
+}
+
+.download-layout-link-container{
+    margin: 1rem auto;
+}
+
+.download-layout-link{
+    width: 10rem;
+    height: 2rem;
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto 0;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-radius: 0.37rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #fff;
+    background-color: #1a56db;
+    border-color: transparent;
+    cursor: pointer;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.download-layout-link-icon{
+    width: 1.5rem;
+}
+
+.new_massive-upload-btn-container{
+    width: 59vw;
+    display: flex;
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.massive-upload-form {
+    width: 40rem;
+    height: 20rem;
+    display: flex;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: #00000066 0px 2px 15px 4px;
+    border-radius: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.file-excel-input {
+    margin: 0 auto;
+}
+
+.file-excel-input[type="file"]::before {
+    content: 'Selecciona un archivo excel para iniciar la carga masiva';
+    display: inline-block;
+    background: #621132;
+    color: #fff;
+    padding: 5px 10px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.file-excel-input-select-new-file[type="file"]::before {
+    content: 'Seleccionar un nuevo archivo para iniciar la carga masiva ';
+    display: inline-block;
+    background: #621132;
+    color: #fff;
+    padding: 5px 10px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.create-massive-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 13.4rem;
+    height: 2.5rem;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    color: #000000;
+    background-color: #b38e5d;
+    font-weight: 500;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0 2rem;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.massive-success-uploaded-table{
+    background-color: #fff;
+    width: 56%;
+    height: 28rem;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: #00000066 0px 2px 15px 4px;
+    overflow-x: scroll;
+}
+
+.massive-success-upload-row{
+    height: 2rem;
+    border-bottom: 2px solid #d7d4d4;
+}
+
+.massive-upload-table-container {
+    background-color: #fff;
+    width: 95%;
+    height: 24rem;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: #00000066 0px 2px 15px 4px;
+    overflow-x: scroll;
+}
+
+.massive-upload-table {
+    background-color: #fff;
+    width: 90%;
+    border-collapse: collapse;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+    color: #000000;
+    font-weight: 200;
+}
+
+.massive-upload-table-thead {
+    height: 3rem;
+    background: #621132;
+    color: #fff;
+    font-size: 1rem;
+    border-bottom: 1.4px solid #f9f6f6;
+    text-align: center;
+    /* FIJAR EL THEAD CUANDO HACEMOS SCROLL */
+    position: sticky;
+    top: 0;
+}
+
+.massive-upload-table-th {
+    border: 0.5px solid #ffff;
+    font-size: 1rem;
+    padding: 0 0.2rem;
+}
+
+.massive-upload-row {
+    height: 20rem;
+    border-bottom: 2px solid #d7d4d4;
+}
+
+.massive-upload-row:hover {
+    font-weight: 500;
+    background-color: #d0cece59;
+}
+
+.massiveUpload-td {
+    text-align: center;
+    padding: 0 1rem;
+    border: 1.5px solid #acaaaa;
+}
