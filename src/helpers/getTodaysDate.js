@@ -19,4 +19,4 @@ export const getTodaysDate = () => {
   return fechaFormateada
 }
 
-// Prueba GitHub
+// Prueba jenkins.
