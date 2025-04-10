@@ -17,6 +17,7 @@ WORKDIR /app
 COPY --from=dev-deps /app/node_modules ./node_modules
 # Copiar todos los archivos al directorio de trabajo actual
 COPY . .
+COPY index.html index.html
 # Construir la aplicación utilizando el comando npm build
 RUN npm run build
 
