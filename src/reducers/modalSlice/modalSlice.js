@@ -5,6 +5,7 @@ const initialState = {
     showModalMessage: false,
     showModalPDF: false,
     showModalUploadPDF: false,
+    showModalLeyenda: false, // NUEVO
 };
 
 const modalSlice = createSlice({
@@ -15,6 +16,7 @@ const modalSlice = createSlice({
             state.showModalMessage = action.payload.showModalMessage
             state.showModalPDF = action.payload.showModalPDF
             state.showModalUploadPDF = action.payload.showModalUploadPDF
+            state.showModalLeyenda = action.payload.showModalLeyenda // NUEVO
         },
     },
 });

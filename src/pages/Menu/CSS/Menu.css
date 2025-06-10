@@ -3,7 +3,8 @@
     margin: 4rem auto;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en varias filas */
+    gap: 2rem; /* Agrega espacio entre los botones */
 }
 
 .expedientes-principal-menu-btn {
@@ -14,16 +15,25 @@
     height: 14rem;
     justify-content: space-around;
     cursor: pointer;
+    border: none; /* Asegúrate de que no haya bordes no deseados */
+    transition: transform 0.2s ease-in-out; /* Agrega animación al hover */
 }
 
-.expedientes-principal-menu-btn>img {
-    width: 10rem;
+.expedientes-principal-menu-btn:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    background-color: rgba(255, 255, 255, 0.1); /* Cambia ligeramente el fondo */
 }
 
-.expedientes-principal-menu-btn>span {
+.expedientes-principal-menu-btn > img {
+    width: 10rem; /* Asegúrate de que el ícono tenga el tamaño adecuado */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
+.expedientes-principal-menu-btn > span {
     color: #7c5531;
     font-weight: 600;
     font-size: 1.2rem;
+    text-align: center; /* Centra el texto */
 }
 
 .menu-container {
