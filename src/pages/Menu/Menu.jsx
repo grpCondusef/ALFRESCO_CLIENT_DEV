@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import add_expediente_icon from '../../img/icons/add-expediente-btn-icon.png'
 import search_expediente_icon from '../../img/icons/search-expediente-btn-icon.png'
 import go_to_dashboard from '../../img/icons/go-to-dashboard-btn-icon.png'
-import recursos_revision_icon from '../../img/icons/recursos-revision-btn-icon.png' // Asegúrate de tener este ícono
+//import recursos_revision_icon from '../../img/icons/recursos-revision-btn-icon.png' // Asegúrate de tener este ícono
 import './CSS/Menu.css'
 
 export const Menu = () => {
