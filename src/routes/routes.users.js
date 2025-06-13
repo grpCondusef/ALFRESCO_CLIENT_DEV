@@ -3,6 +3,7 @@ import { BlankLayout } from "../layouts/BlankLayout"
 import ChangePassword from "../pages/ChangePassword/ChangePassword"
 import CrearExpediente from "../pages/CrearExpediente/CrearExpediente"
 import { Dashboard } from "../pages/Dashboard/Dashboard"
+import {RecursosRevision} from "../pages/RecursosRevision/RecursosRevision"
 import { Documents } from "../pages/Documents/Documents"
 import EmptyExpedientes from "../pages/EmptyExpedientes/EmptyExpedientes"
 import { Expedientes } from "../pages/Expedientes/Expedientes"
@@ -61,6 +62,11 @@ const usersRoutes = [
         path: 'expediente/empty-expedientes/:area_id',
         layout: BlankLayout,
         component: EmptyExpedientes,
+    },
+    {
+        path: 'recursos-revision', 
+        layout: BasicLayout,
+        component: RecursosRevision,
     },
 ]
 

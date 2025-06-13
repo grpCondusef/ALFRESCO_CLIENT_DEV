@@ -39,6 +39,7 @@ function App() {
           areas_asociadas: resultado.areas_asociadas,
           eliminar_documentos: resultado.eliminar_documentos,
           dashboard_uau: resultado.dashboard_uau,
+          certificar_expediente: resultado.certificar_expediente // Agregamos la propiedad recursos_revision
         }))
       } catch (error) {
         console.log(error)

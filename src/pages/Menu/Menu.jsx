@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom'
 import add_expediente_icon from '../../img/icons/add-expediente-btn-icon.png'
 import search_expediente_icon from '../../img/icons/search-expediente-btn-icon.png'
 import go_to_dashboard from '../../img/icons/go-to-dashboard-btn-icon.png'
-//import recursos_revision_icon from '../../img/icons/recursos-revision-btn-icon.png' // Asegúrate de tener este ícono
+import recursos_revision_icon from '../../img/icons/recursos-revision-btn-icon.png' // Asegúrate de tener este ícono
 import './CSS/Menu.css'
 
 export const Menu = () => {
 
     const navigate = useNavigate()
-    const { crear_expedientes, dashboard_uau, recursos_revision } = useSelector(state => state.auth) // Agregamos `recursos_revision`
+    const { crear_expedientes, dashboard_uau, certificar_expediente } = useSelector(state => state.auth) 
 
     const goToExpedientesModule = (link) => {
         navigate(`${link}`)
@@ -44,7 +44,7 @@ export const Menu = () => {
                         <span>DASHBOARD</span>
                     </button>
                 ) : ''}
-                {recursos_revision ? ( // Verificamos si el usuario tiene permiso para ver esta opción
+                {certificar_expediente ? ( // Verificamos si el usuario tiene permiso para ver esta opción
                     <button
                         className='expedientes-principal-menu-btn'
                         onClick={() => goToExpedientesModule('/recursos-revision')}

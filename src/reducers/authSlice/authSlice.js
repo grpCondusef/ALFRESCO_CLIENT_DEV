@@ -16,7 +16,8 @@ const initialState = {
     carga_masiva: undefined,
     areas_asociadas: [],
     eliminar_documentos: undefined,
-    dashboard_uau: undefined
+    dashboard_uau: undefined,
+    certificar_expediente:undefined
 };
 
 const authSlice = createSlice({
@@ -40,6 +41,8 @@ const authSlice = createSlice({
             state.areas_asociadas = action.payload.areas_asociadas
             state.eliminar_documentos = action.payload.eliminar_documentos
             state.dashboard_uau = action.payload.dashboard_uau
+            state.certificar_expediente = action.payload.certificar_expediente // Agregamos la propiedad recursos_revision
+            // Puedes agregar más propiedades según sea necesario
         },
     },
 });

@@ -53,6 +53,7 @@ export const LoginForm = () => {
         areas_asociadas: resultado.areas_asociadas,
         eliminar_documentos: resultado.eliminar_documentos,
         dashboard_uau: resultado.dashboard_uau,
+        certficar_expediente: resultado.certificar_expediente // Agregamos la propiedad recursos_revision
       }))
       localStorage.setItem(CONDUSEF_TOKEN, resultado.token.access) //AGREGAMOS EL TOKEN AL LOCAL STORAGE
       navigate("/")
