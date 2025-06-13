@@ -374,6 +374,20 @@ export const Documents = () => {
                     </button>
                 ) : ''}
 
+
+                {/* NUEVO BOTÓN DE FIRMA ELECTRÓNICA */}
+                <button
+                    className="btn-generar-integrado"
+                    type="button"
+                    onClick={() => window.open('http://192.168.10.66:32116/', '_blank')}
+                >
+                    {/* Si tienes un icono para la firma, descomenta la línea de abajo y agrega el archivo en tu carpeta img/icons */}
+                    {/* <img src={firma_icon} alt="Firma" className="upload-icon-btn-documents" /> */}
+                    <span className="btn-select-name">
+                        Firma Electrónica
+                    </span>
+                </button>
+
                 {eliminar_expedientes ? (
                     <button
                         className="btn-eliminar-expediente"

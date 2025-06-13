@@ -14,8 +14,15 @@
 .documents-buttons-container {
   display: flex;
   max-width: 53rem;
-  justify-content: space-around;
+  justify-content: flex-start; /* <-- Cambia space-around a flex-start */
   margin-left: 2.7rem;
+  gap: 0.7rem;                /* Espacio horizontal entre botones */
+  flex-wrap: nowrap;          /* <-- Esto evita que salten a otra línea */
+}
+
+.documents-buttons-container > * {
+  margin-right: 0;            /* Elimina margen redundante */
+  margin-bottom: 0;
 }
 
 .btn-documents-regresar {

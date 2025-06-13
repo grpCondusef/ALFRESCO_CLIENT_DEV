@@ -68,7 +68,7 @@ export const generarIntegradoFoliado = async (
                 showModalUploadPDF: false,
                 showModalLeyenda: false
             }))
-            addRegistroBitacora(token, 'crear', `generar integrado del expediente ${clave}`, expediente_id)
+            addRegistroBitacora(token, 'crear', `generar certificado del expediente ${clave}`, expediente_id)
         }
 
     } catch (error) {
