@@ -19,6 +19,7 @@ import ErrorMessage from '../../components/ErrorMessage'
 import { MessageModal } from './Components/MessageModal'
 import { handleVerPortada } from './fetchCalls/handleVerPortada'
 import { generarIntegradoFoliado } from './fetchCalls/generarIntegradoFoliado'
+import { generarIntegradoCertificado } from './fetchCalls/generarIntegradoCertificado'
 import upload_icon from '../../img/icons/upload-icon.svg'
 import generar_integrado from '../../img/icons/pdf-integrado-icon.png'
 import folder_icon from '../../img/icons/folder-icon.png'
@@ -82,6 +83,7 @@ export const Documents = () => {
     const { showLoader } = useSelector(state => state.loader) //CONSUMIMOS EL STATE A TRAVÉS DE REDUX
     const { showErrorMessage, errorMessage } = useSelector(state => state.errorMessage)
     const { showModalLeyenda } = useSelector(state => state.modal);
+    const [tipoLeyendaModal, setTipoLeyendaModal] = useState(""); // NUEVO
     const [leyendaPrevia, setLeyendaPrevia] = useState("");
     let expedientTotalPages = 0
 
@@ -217,6 +219,37 @@ export const Documents = () => {
 
     };
 
+    // Handler para certificado
+    const handleGenerarIntegradoCertificado = async () => {
+        setTipoLeyendaModal("certificado");
+        await generarIntegradoCertificado(
+            token, clave, expediente_id, loaderDispatch, setLoader, setPdfUrl, modalDispatch, setModal, setErrorGenerarIntegrado, errorMessagePortada,
+            (leyenda) => {
+                setLeyendaPrevia(leyenda);
+                modalDispatch(setModal({
+                    showModalMessage: false,
+                    showModalPDF: false,
+                    showModalUploadPDF: false,
+                    showModalLeyenda: true
+                }));
+            }
+        );
+    };
+    // Confirmación para certificado
+    const handleConfirmLeyendaCertificado = async (recurrente) => {
+        modalDispatch(setModal({
+            showModalMessage: false,
+            showModalPDF: false,
+            showModalUploadPDF: false,
+            showModalLeyenda: false
+        }));
+        await generarIntegradoCertificado(
+            token, clave, expediente_id, loaderDispatch, setLoader, setPdfUrl, modalDispatch, setModal, setErrorGenerarIntegrado, errorMessagePortada,
+            () => {},
+            recurrente
+        );
+    };
+
 // PRIMER FETCH: pide leyenda previa y muestra modal
     const handleGenerarIntegradoFoliado = async () => {
         await generarIntegradoFoliado(
@@ -268,11 +301,12 @@ export const Documents = () => {
 
     return (
         <div>
-           {showModalLeyenda && (
+
+            {showModalLeyenda && (
                 <Modal>
                     <CertificacionLeyendaModal
                         leyendaPrevia={leyendaPrevia}
-                        onConfirm={handleConfirmLeyenda}
+                        onConfirm={tipoLeyendaModal === "certificado" ? handleConfirmLeyendaCertificado : handleConfirmLeyenda}
                         onCancel={() =>
                             modalDispatch(setModal({
                                 showModalMessage: false,
@@ -284,6 +318,7 @@ export const Documents = () => {
                     />
                 </Modal>
             )}
+            
             {showErrorMessage && showModalMessage ? (
                 <Modal>
                     <ErrorMessage>
@@ -360,6 +395,18 @@ export const Documents = () => {
                     </span>
                 </button>
 
+                <button
+                    className="btn-generar-integrado"
+                    type="button"
+                    onClick={handleGenerarIntegradoCertificado}
+                >
+                    <img src={generar_integrado} alt=""
+                        className="upload-icon-btn-documents" />
+                    <span className="btn-select-name">
+                        Generar Integrado Certificado
+                    </span>
+                </button>
+                {/*}
                 {Object.keys(selectedCheckboxes).length > 0 ? (
                     <button
                         className="btn-generar-integrado"
@@ -374,7 +421,7 @@ export const Documents = () => {
                     </button>
                 ) : ''}
 
-
+                */}
                 {/* NUEVO BOTÓN DE FIRMA ELECTRÓNICA */}
                 <button
                     className="btn-generar-integrado"
