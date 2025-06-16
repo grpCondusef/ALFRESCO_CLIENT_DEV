@@ -6,7 +6,7 @@ const timeout = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export const handleCrearExpediente = async (token, values, tipoMacroproceso, macroproceso, proceso, serie, area_id, idAreaSIO, institucionSeleccionada, setcamposVacios,loaderDispatch, setLoader, modalDispatch, setModal,  navigate, errorMessageDispatch, setErrorMessage) => {
+export const handleCrearExpediente = async (token, values, tipoMacroproceso, macroproceso, proceso, serie, area_id, idAreaSIO, institucionSeleccionada, setcamposVacios, loaderDispatch, setLoader, modalDispatch, setModal, navigate, errorMessageDispatch, setErrorMessage) => {
 
     const expedienteData = {
         "idTipoMacroproceso": parseInt(tipoMacroproceso),
@@ -28,12 +28,12 @@ export const handleCrearExpediente = async (token, values, tipoMacroproceso, mac
     }
 
     const verifyData = () => {
-        if ((parseInt(serie) === 30 && !expedienteData.idInstitucion) || (parseInt(serie) !== 30 && expedienteData.idInstitucion) ) {
+        if ((parseInt(serie) === 30 && !expedienteData.idInstitucion) || (parseInt(serie) !== 30 && expedienteData.idInstitucion)) {
             return true
         } else {
             return false
         }
-    }
+    };
 
     const confirmar = confirm('Los datos del expediente son correctos?')
 
@@ -47,6 +47,7 @@ export const handleCrearExpediente = async (token, values, tipoMacroproceso, mac
 
         try {
             const url = `${URL_API}/catalogos/expediente-add-view/`
+
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: JSON.stringify(expedienteData),
@@ -54,7 +55,7 @@ export const handleCrearExpediente = async (token, values, tipoMacroproceso, mac
                     "Content-type": "application/json",
                     "Authorization": `Bearer ${token}`
                 }
-            })
+            });
             const resultado = await respuesta.json()
             if (resultado) {
                 if (resultado.expediente_data) {
