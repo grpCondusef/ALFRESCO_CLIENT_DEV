@@ -3,6 +3,7 @@ import { URL_API } from "../../../utils/constants"
 export const getExpedienteInfo = async (token, expediente_id, expedienteInfoDispatch, setExpedienteInfo) => {
     try {
         const url = `${URL_API}/catalogos/expediente-info/${expediente_id}` //SELECCIONAMOS expediente POR SU "id"
+
         const respuesta = await fetch(url, {
             method: 'GET',
             headers: {
