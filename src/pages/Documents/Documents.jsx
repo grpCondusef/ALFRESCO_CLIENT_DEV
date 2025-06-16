@@ -173,7 +173,9 @@ export const Documents = () => {
         loaderDispatch(setLoader({
             showLoader: true
         }))
-        setPdfUrl(`${URL_API}/files/` + uploadedFile)
+        // Limpia el posible slash inicial
+        const cleanPath = uploadedFile.replace(/^\/+/, '');
+        setPdfUrl(`${URL_API}/files/` + cleanPath)
         modalDispatch(setModal({
             showModalPDF: true,
         }))
