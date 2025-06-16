@@ -77,7 +77,7 @@ export const Documents = () => {
     const expedienteInfoDispatch = useDispatch()
     const [pdfUrl, setPdfUrl] = useState('')
     const navigate = useNavigate()
-    const { id, eliminar_expedientes, subir_documentos, eliminar_documentos } = useSelector(state => state.auth)
+    const { id, eliminar_expedientes, subir_documentos, eliminar_documentos, certificar_expediente } = useSelector(state => state.auth)
     const { clave, fechaCreacion } = useSelector(state => state.expedienteInfo) //CONSUMIMOS EL STATE A TRAVÉS DE REDUX
     const { showModalMessage, showModalPDF, showModalUploadPDF } = useSelector(state => state.modal) //CONSUMIMOS EL STATE A TRAVÉS DE REDUX
     const { showLoader } = useSelector(state => state.loader) //CONSUMIMOS EL STATE A TRAVÉS DE REDUX
@@ -394,7 +394,7 @@ export const Documents = () => {
                         Generar Integrado
                     </span>
                 </button>
-
+            {certificar_expediente ? (
                 <button
                     className="btn-generar-integrado"
                     type="button"
@@ -406,6 +406,7 @@ export const Documents = () => {
                         Generar Integrado Certificado
                     </span>
                 </button>
+            ) : null}
                 {/*}
                 {Object.keys(selectedCheckboxes).length > 0 ? (
                     <button
